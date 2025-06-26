@@ -1,0 +1,12 @@
+Sub Test_TripleDES()
+    On Error GoTo errhandler
+
+    Dim crypto As Object
+    Set crypto = CreateObject("System.Security.Cryptography.TripleDESCryptoServiceProvider")
+
+    MsgBox "TripleDESCryptoServiceProvider が使用可能です！", vbInformation
+    Exit Sub
+
+errhandler:
+    MsgBox "エラー: " & Err.Number & vbCrLf & Err.Description, vbCritical
+End Sub
